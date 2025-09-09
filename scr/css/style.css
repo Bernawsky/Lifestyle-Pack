@@ -1,0 +1,614 @@
+/*Comic-Neue and Poppins*/
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --color-primary: #f8b500;
+  --color-secondary: #999999;
+  --color-background: #1c1c1c;
+  --color-text-light: #f2f2f2;
+  --color-text-black: #1c1c1c;
+  --background-light: linear-gradient(90deg, #fceabb, #f8b500);
+  --background-blue: linear-gradient(90deg, #fceabb, #0d53bb);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  height: 100vh;
+  background-color: var(--color-background);
+  user-select: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  padding: 20px 0;
+  margin: auto;
+  left: 0;
+  right: 0;
+  flex-direction: row;
+  position: absolute;
+  z-index: 3;
+}
+
+header ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+header ul li {
+  list-style: none;
+}
+
+header ul li a {
+  color: var(--color-text-light);
+  font-size: 12px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 400;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+header ul li a:hover,
+header ul li a span {
+  transform: translateY(-100px);
+  color: var(--color-secondary);
+}
+
+header ul li a span {
+  color: var(--color-primary);
+  font-size: 8px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.Logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+}
+
+.ContainerHome {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  width: 90%;
+  min-height: 98vh;
+  padding: 40px 0px;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  position: relative;
+  z-index: 2;
+}
+.ContainerHome h1 {
+  width: 50%;
+  font-size: 30px;
+  font-family: Poppins;
+  font-weight: 700;
+  font-style: normal;
+  color: var(--color-text-light);
+}
+
+.ContainerHome h2 {
+  color: var(--color-secondary);
+  font-size: 18px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.ButtonCTA {
+  text-align: center;
+  text-decoration: none;
+  color: var(--color-text-black);
+  background: var(--background-light);
+  font-size: 12px;
+  font-family: Poppins;
+  font-weight: 500;
+  font-style: normal;
+  width: 150px;
+  height: max-content;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: #f8b500 0px 0px 30px;
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.ButtonFree {
+  text-align: center;
+  text-decoration: none;
+  color: var(--color-text-black);
+  background: var(--background-blue);
+  font-size: 12px;
+  font-family: Poppins;
+  font-weight: 500;
+  font-style: normal;
+  width: 150px;
+  height: max-content;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: #0d53bb 0 0 30px;
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.IconHome {
+  width: 40%;
+  height: max-content;
+  max-width: 800px;
+  position: absolute;
+  right: 50px;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  z-index: -1;
+  -webkit-mask-image: linear-gradient(to top, transparent 15%, #1c1c1c 100%),
+    linear-gradient(to bottom, transparent 0%, #1c1c1c 0%),
+    linear-gradient(to left, transparent 1%, #1c1c1c 4%),
+    linear-gradient(to right, transparent 1%, #1c1c1c 4%);
+  -webkit-mask-composite: intersect;
+  mask-composite: intersect;
+}
+
+/*Icone antigo*/
+
+/* .IconHome {
+  width: 55%;
+  height: max-content;
+  max-width: 800px;
+  position: absolute;
+  right: 50px;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  z-index: -1;
+  filter: drop-shadow(0 0 20px var(--color-primary));
+} */
+
+.ContainerExplication {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+  width: 90%;
+  row-gap: 3rem;
+}
+
+.Info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+  width: 70%;
+  height: 250px;
+}
+
+#Reverse {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "Text Image";
+  align-items: center;
+  width: 70%;
+  height: 250px;
+  margin: auto;
+}
+
+#Reverse > .Text {
+  grid-area: Text;
+}
+#Reverse > .Image {
+  grid-area: Image;
+}
+
+.Text h1 {
+  font-size: 25px;
+  font-family: Poppins;
+  font-weight: 500;
+  font-style: normal;
+  color: var(--color-text-light);
+}
+
+.Text p {
+  font-size: 12px;
+  font-family: Poppins;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--color-secondary);
+}
+
+.Image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 250px;
+}
+
+.Image img {
+  width: 70%;
+}
+
+.ContainerBoost {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 90%;
+  height: max-content;
+  padding: 20px;
+  gap: 2rem;
+  margin: auto;
+  margin-top: 100px;
+}
+.Boost {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.Boost img {
+  width: 55%;
+}
+
+.Boost h1 {
+  font-size: 20px;
+  font-family: Poppins;
+  font-weight: 500;
+  font-style: normal;
+  color: var(--color-text-light);
+}
+
+.Boost p {
+  text-align: center;
+  font-size: 12px;
+  font-family: Poppins;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--color-secondary);
+  width: 260px;
+}
+
+.ContainerExplication img,
+.ContainerBoost img {
+  filter: drop-shadow(0 0px 20px rgba(255, 255, 255, 0.09));
+}
+
+.CTA {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 90%;
+  height: max-content;
+  margin: auto;
+}
+
+.ContainerCTA {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  width: 87%;
+  padding: 25px 10px;
+  background-color: transparent;
+  border: 1px solid var(--color-primary);
+  border-radius: 10px;
+  box-shadow: var(--color-primary) 0 0 20px;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+.ContainerCTA h1 {
+  text-align: center;
+  font-size: 20px;
+  font-family: Poppins;
+  font-weight: 500;
+  font-style: normal;
+  color: var(--color-primary);
+  margin: auto;
+}
+
+.ContainerCTA p {
+  font-size: 12px;
+  font-family: Poppins;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--color-text-light);
+  margin: auto;
+}
+
+.InfoCTA span {
+  height: 50px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: row;
+  font-size: 12px;
+  font-family: Poppins;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--color-text-light);
+}
+
+.InfoCTA img {
+  width: 30px;
+}
+
+/*Buttons*/
+
+.ContainerCTA a,
+.ContainerExplication a {
+  text-align: center;
+  text-decoration: none;
+  color: var(--color-text-black);
+  background: var(--background-light);
+  font-size: 12px;
+  font-family: Poppins;
+  font-weight: 500;
+  font-style: normal;
+  width: 150px;
+  height: max-content;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: #f8b500 0 0 30px;
+  margin: auto;
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.ContainerCTA a:hover,
+.ContainerExplication a:hover,
+.ContainerHome a:hover {
+  transform: scale(1.1);
+  box-shadow: #f8b500 0 0 20px;
+}
+
+.ContainerFAQ {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  flex-direction: column;
+  row-gap: 10px;
+  padding: 50px 0;
+  margin: auto;
+}
+
+.Question {
+  display: grid;
+  grid-template-columns: 10% 1fr;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  border: 1px solid var(--color-primary);
+  border-radius: 10px;
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+  padding: 10px;
+}
+
+.ImageFAQ {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  align-self: start;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.ImageFAQ img {
+  width: 20px;
+}
+
+.Question p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+  font-family: Poppins;
+  font-weight: 500;
+  font-style: normal;
+  color: var(--color-text-light);
+}
+
+.response {
+  display: block;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.6s ease-in-out;
+  font-size: 13px;
+  font-family: Poppins;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--color-secondary);
+}
+
+/* Quando ativo */
+.Question.active .response {
+  max-height: 200px; /* Ajuste conforme o conteúdo */
+}
+
+/* Opcional: animação com keyframes */
+@keyframes Open {
+  from {
+    max-height: 0;
+  }
+  to {
+    max-height: 200px;
+  }
+}
+
+@keyframes Close {
+  from {
+    max-height: 200px;
+  }
+  to {
+    max-height: 0;
+  }
+}
+
+footer {
+  width: 100vw;
+  height: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+footer p {
+  font-size: 13px;
+  font-family: Poppins;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--color-text-light);
+}
+
+@media screen and (max-width: 1000px) {
+  header {
+    display: none;
+  }
+
+  .ContainerHome {
+    justify-content: end;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 3rem;
+    min-height: auto;
+    height: max-content;
+  }
+
+  .IconHome {
+    position: relative;
+    right: auto;
+    margin: auto;
+    top: 0;
+    bottom: auto;
+  }
+
+  .ContainerHome h1 {
+    width: 80%;
+  }
+
+  .ContainerBoost {
+    flex-direction: column;
+  }
+
+  .Boost {
+    width: 90%;
+    border: 1px solid var(--color-primary);
+    border-radius: 10px;
+  }
+}
+
+@media screen and (max-width: 812px) {
+  .ContainerExplication {
+    row-gap: 0rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .ContainerHome h1 {
+    font-size: 20px;
+  }
+
+  .ContainerHome h2 {
+    font-size: 13px;
+  }
+
+  .IconHome {
+    width: 50%;
+  }
+
+  .ContainerExplication {
+    row-gap: 4rem;
+  }
+
+  .Info,
+  #Reverse {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    height: 300px;
+  }
+
+  .Info img {
+    width: 50%;
+  }
+
+  .ContainerBoost {
+    row-gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .ContainerBoost {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .ContainerHome h1,
+  .ContainerExplication h1,
+  .ContainerBoost h1,
+  .ContainerCTA h1 {
+    font-size: 18px;
+    text-align: center;
+    width: 100%;
+  }
+
+  h2 {
+    font-size: 12px;
+    width: 100%;
+  }
+
+  p {
+    text-align: center;
+    font-size: 10px;
+  }
+
+  .IconHome {
+    width: 55%;
+  }
+
+  .ContainerFAQ {
+    margin: auto;
+    top: 0px;
+    bottom: 0px;
+  }
+
+  .Question {
+    width: 90%;
+    padding: 5px 10px;
+    margin: 0;
+  }
+}
